@@ -10,7 +10,6 @@ document.querySelector("#add-button").addEventListener('click', function(){
 })
 
 let fetchUser = function(query) {
-    console.log(query);
     let url = "https://api.github.com/repos/facebook/react/commits/" + query;
 
     fetch(url, {
@@ -25,7 +24,6 @@ let fetchUser = function(query) {
 let grabUserAvatar =  function(data) {
     let avatar = data.author.avatar_url || null;
     let name = data.commit.author.name || null;
-    console.log(data);
 
     let template = `
     <div class="card">
